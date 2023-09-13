@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<script>
+  const moyenne=(notes)=>{
+    let sum=0;
+    for(let note of notes){
+        sum +=note;
+        return sum / notes.length;
+    }
+  }
+
+
+ class student{
+    ecole='july ferry'; 
+    constructor(firstname, lastname){
+    this.firstname=firstname;
+    this.lastname=lastname;
+
+  }
+
+  SetNotes(notes){
+     this.notes=notes;
+  }
+  canPass(){
+    return moyenne(this.notes) >=10;
+  }
+
+ } 
+ 
+ const john= new student('okly','iradukunda')
+ const okly= new student('steve','arakaza')
+ john.SetNotes([10,8,10]);
+ okly.SetNotes([13,15,19]);
+ console.log(john.canPass(), okly.canPass());
+</script>
+
+</head>
+<body>
+    
+
+</body>
+</html>
